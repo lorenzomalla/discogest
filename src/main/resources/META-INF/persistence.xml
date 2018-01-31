@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="DiscoGest" transaction-type="JTA">
+	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+	<jta-data-source>java:jboss/jdbc/discoDS</jta-data-source>
+	<class>it.discogest.model.CaricoSerate</class>
+	<class>it.discogest.model.CategorieProdotti</class>
+	<class>it.discogest.model.Comande</class>
+	<class>it.discogest.model.InfoLocale</class>
+	<class>it.discogest.model.InfoUser</class>
+	<class>it.discogest.model.Location</class>
+	<class>it.discogest.model.Piantine</class>
+	<class>it.discogest.model.Prenotazioni</class>
+	<class>it.discogest.model.Prodotti</class>
+	<class>it.discogest.model.Ruoli</class>
+	<class>it.discogest.model.Serate</class>
+	<class>it.discogest.model.StatoPrenotazione</class>
+	<!-- <mapping-file>META-INF/orm.xml</mapping-file> -->
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
+<!-- 			<property name="hibernate.hbm2ddl.auto" value="update" /> -->
+<!-- 			<property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.SunOneJtaPlatform"/> -->
+			<property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.JBossAppServerJtaPlatform" />
+			<property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/>
+		</properties>
+	</persistence-unit>
+</persistence>
