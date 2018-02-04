@@ -1,8 +1,8 @@
-package it.discogest.dao;
+package it.discogest.service;
 
 import it.discogest.model.InfoUser;
 
-public interface InfoUserDao {
+public interface InfoUserService {
 
 	public void add(InfoUser infoUser);
 	

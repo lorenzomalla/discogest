@@ -1,8 +1,8 @@
-package it.discogest.dao;
+package it.discogest.service;
 
 import it.discogest.model.Serate;
 
-public interface SerateDao {
+public interface SerateService {
 
 	public void add(Serate serate);
 	

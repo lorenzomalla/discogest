@@ -1,8 +1,8 @@
-package it.discogest.dao;
+package it.discogest.service;
 
 import it.discogest.model.InfoLocale;
 
-public interface InfoLocaleDao {
+public interface InfoLocaleService {
 
 	public void add(InfoLocale infoLocale);
 	

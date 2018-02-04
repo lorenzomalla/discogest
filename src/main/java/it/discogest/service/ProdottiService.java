@@ -1,8 +1,8 @@
-package it.discogest.dao;
+package it.discogest.service;
 
 import it.discogest.model.Prodotti;
 
-public interface ProdottiDao {
+public interface ProdottiService {
 
 	public void add(Prodotti prodotti);
 	
