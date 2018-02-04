@@ -1,5 +1,15 @@
 package it.discogest.service;
 
-public class CategorieProdottiServiceImpl {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import it.discogest.dao.CategorieProdottiDao;
+
+@Service
+public class CategorieProdottiServiceImpl implements CategorieProdottiService{
+
+	@Autowired
+	private CategorieProdottiDao dao;
+	
+	
 }
